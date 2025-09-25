@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-hw",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maksym-Sem83/nodejs-hw.git"
+  },
+  "keywords": [],
+  "author": "Maksym Semenov <max_semenov@ukr.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maksym-Sem83/nodejs-hw/issues"
+  },
+  "homepage": "https://github.com/Maksym-Sem83/nodejs-hw#readme",
+  "description": ""
+}
