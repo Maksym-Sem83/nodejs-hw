@@ -2,11 +2,10 @@ import express from 'express';
 import cors from 'cors';
 import pino from 'pino-http';
 import 'dotenv/config';
+import { connectMongoDB } from './db/connectMongoDB.js';
 
 const app = express();
-
-// Використовуємо значення з .env або дефолтний порт 3000
-const PORT = process.env.PORT ?? 3030;
+const PORT = process.env.PORT ?? 3030; // Використовуємо значення з .env або дефолтний порт 3000
 
 // Middleware
 app.use(express.json());
@@ -53,6 +52,8 @@ console.error('Error:', err.message);
    message: err.message,
  });
 });
+
+await connectMongoDB();
 
 app.listen(PORT, () => {
 console.log(`Server is running on port ${PORT}`);
