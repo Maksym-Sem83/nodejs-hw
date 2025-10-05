@@ -12,15 +12,11 @@ const app = express();
 const PORT = process.env.PORT ?? 3030;
 
 // Middleware
-app.use(logger);
 app.use(express.json());
 app.use(cors());
+app.use(logger);
 
 app.use(notesRoutes);
-
-app.get('/test-error', (req, res) => {
-  throw new Error('Simulated server error');
-});
 
 // Middleware 404 (після всіх маршрутів)
 app.use(notFoundHandler);
